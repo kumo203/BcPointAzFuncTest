@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BcPointUnitTestProject", "BcPointUnitTestProject\BcPointUnitTestProject.csproj", "{FED16599-3D5E-4853-B409-3D055C912D70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzFuncMock", "AzFuncMock\AzFuncMock.csproj", "{8491DCAF-DA7B-4E03-903D-D8E9883794EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FED16599-3D5E-4853-B409-3D055C912D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED16599-3D5E-4853-B409-3D055C912D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED16599-3D5E-4853-B409-3D055C912D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED16599-3D5E-4853-B409-3D055C912D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8491DCAF-DA7B-4E03-903D-D8E9883794EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8491DCAF-DA7B-4E03-903D-D8E9883794EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8491DCAF-DA7B-4E03-903D-D8E9883794EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8491DCAF-DA7B-4E03-903D-D8E9883794EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CA53E6A-7490-481E-8CDC-07DE193E003F}
+	EndGlobalSection
+EndGlobal
