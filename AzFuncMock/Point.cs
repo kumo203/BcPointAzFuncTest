@@ -13,23 +13,26 @@ namespace AzFuncMock
     public static class Point
     {
         [FunctionName("PutPoint")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "put", Route = null)] HttpRequest req,
-            ILogger log)
+        public static async Task<IActionResult> Put(
+            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "/account/{id}/point/{operation}")] HttpRequest req,
+            ILogger log, string id, string operation)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
+            if (id.ToUpper() == "InternalServerError".ToUpper())
+            {
+                return new ObjectResult(id) { StatusCode = 500 };
+            }
+            if (id.ToUpper() == "NotFound".ToUpper())
+            {
+                return new NotFoundObjectResult(id);
+            }
+            if (id.ToUpper() == "BadParam".ToUpper())
+            {
+                return new BadRequestObjectResult(id);
+            }
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
-
-            return new OkObjectResult(responseMessage);
+            return new ObjectResult(id) { StatusCode = 202 };
         }
     }
 }

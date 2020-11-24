@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace BcPointUnitTestProject
+namespace AzFuncMock
 {
     public class CreatedObjectResult : ActionResult
     {

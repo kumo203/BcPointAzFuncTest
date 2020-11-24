@@ -1,3 +1,4 @@
+using AzFuncMock;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,7 +13,7 @@ using System.Text;
 namespace BcPointUnitTestProject
 {
     [TestClass]
-    public class PostAccountTest
+    public class AccountTest
     {
         [TestMethod]
         public async System.Threading.Tasks.Task PostAccountTests()
